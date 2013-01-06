@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<categories>
+    <category id="0">
+        <name>Work</name>
+        <subname>My notes for work.</subname>
+        <note id="0">
+            <title>First work note</title>
+            <deadline>2012-11-30</deadline>
+            <priority>h</priority>
+            <description>Do your work.</description>
+            <created>2012-11-24</created>
+        </note>
+        <note id="1">
+            <title>Must finish SP</title>
+            <deadline>2012-11-30</deadline>
+            <priority>m</priority>
+            <description>Not much work to do...</description>
+            <created>2012-11-24</created>
+        </note>
+		<note id="2">
+            <title>My 3rd note</title>
+            <deadline>2012-11-30</deadline>
+            <priority>h</priority>
+            <description>Description of 3rd note</description>
+            <created>2012-11-24</created>
+        </note>
+		<note id="3">
+            <title>SP Faza 2</title>
+            <deadline>2012-11-30</deadline>
+            <priority>h</priority>
+            <description>Check if everything is working.</description>
+            <created>2012-11-24</created>
+        </note>
+		<note id="4">
+            <title>Another note</title>
+            <deadline>2012-11-30</deadline>
+            <priority>m</priority>
+            <description>Some text...</description>
+            <created>2012-11-24</created>
+        </note>
+    </category>
+    <category id="1">
+        <name>Free time</name>
+        <subname>Small amount of notes here.</subname>
+        <note id="0">
+            <title>Be bored</title>
+            <deadline>2012-11-30</deadline>
+            <priority>m</priority>
+            <description>I'm bored.</description>
+            <created>2012-11-24</created>
+        </note>
+        <note id="1">
+            <title>Free time second note</title>
+            <deadline>2012-11-25</deadline>
+            <priority>h</priority>
+            <description>Note description.</description>
+            <created>2012-11-24</created>
+        </note>
+    </category>
+</categories>

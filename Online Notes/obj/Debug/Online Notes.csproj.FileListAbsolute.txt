@@ -1,0 +1,10 @@
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\Online Notes\Online Notes\bin\Online Notes.dll
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\Online Notes\Online Notes\bin\Online Notes.pdb
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\Online Notes\Online Notes\obj\Debug\Online Notes.dll
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\Online Notes\Online Notes\obj\Debug\Online Notes.pdb
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\Online Notes\Online Notes\obj\Debug\Online Notes.csprojResolveAssemblyReference.cache
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\ASP.NET\Online Notes\Online Notes\obj\Debug\Online Notes.csprojResolveAssemblyReference.cache
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\ASP.NET\Online Notes\Online Notes\obj\Debug\Online Notes.dll
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\ASP.NET\Online Notes\Online Notes\obj\Debug\Online Notes.pdb
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\ASP.NET\Online Notes\Online Notes\bin\Online Notes.dll
+D:\Fakulteta\3. letnik\Spletno programiranje\Faza 4\ASP.NET\Online Notes\Online Notes\bin\Online Notes.pdb

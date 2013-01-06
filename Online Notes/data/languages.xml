@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+    <language id="slovene">
+        <element id="email-label">
+            Email:
+        </element>
+        <element id="password-label">
+            Geslo:
+        </element>
+		<element id="retype-password-label">
+            Ponovi geslo:
+        </element>
+		<element id="login-button">
+            Prijava
+        </element>
+		<element id="not-a-member">
+            Nisi član?
+        </element>
+		<element id="register-link">
+            Registriaj se tukaj!
+        </element>
+		<element id="remember">
+            Zapomni si me
+        </element>
+		<element id="register-button">
+            Registracija
+        </element>
+		<element id="username-label">
+            Uporabniško ime:
+        </element>
+		<element id="language-choice">
+            Jezik:
+        </element>
+		<element id="menu-home">
+            Domov
+        </element>
+		<element id="menu-topfive">
+            Današnjih Top 5
+        </element>
+		<element id="menu-completed">
+            Dokončani
+        </element>
+		<element id="menu-productivity">
+            Produktivnost
+        </element>
+		<element id="categories-heading">
+			Kategorije
+		</element>
+      <element id="heading-admin">
+        Administracija
+      </element>
+		<element id="welcome-label">
+			Dobrodošli
+		</element>
+		<element id="add-category">
+			Dodaj Kategorijo
+		</element>
+		<element id="add-note">
+			Dodaj opravilo
+		</element>
+		<element  id="heading-topfive">
+			Današnjih Top 5
+		</element>
+		<element  id="heading-completed">
+			Že dokončana opravila
+		</element>
+		<element  id="heading-productivity">
+			Vaša produktivnost
+		</element>
+    </language>
+    <language id="english">
+        <element id="email-label">
+            Email:
+        </element>
+        <element id="password-label">
+            Password:
+        </element>
+		<element id="retype-password-label">
+            Retype password:
+        </element>
+		<element id="login-button">
+            Login
+        </element>
+		<element id="not-a-member">
+            Not a member?
+        </element>
+		<element id="register-link">
+            Register here!
+        </element>
+		<element id="remember">
+            Remember me on this computer
+        </element>
+		<element id="register-button">
+            Register
+        </element>
+		<element id="username-label">
+            Username:
+        </element>
+		<element id="language-choice">
+            Language:
+        </element>
+		<element id="menu-home">
+            Home
+        </element>
+		<element id="menu-topfive">
+            Today's Top 5
+        </element>
+		<element id="menu-completed">
+            Completed
+        </element>
+		<element id="menu-productivity">
+            Productivity
+        </element>
+		<element id="categories-heading">
+			Categories
+		</element>
+		<element id="welcome-label">
+			Welcome
+		</element>
+		<element id="add-category">
+			Add Category
+		</element>
+		<element id="add-note">
+			Add note
+		</element>
+		<element  id="heading-topfive">
+			Today's top 5
+		</element>
+		<element  id="heading-completed">
+			Already completed notes
+		</element>
+      <element id="heading-admin">
+        Admin site
+      </element>
+		<element  id="heading-productivity">
+			Your productivity
+		</element>
+    </language>
+    
+</languages>

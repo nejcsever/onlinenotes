@@ -1,0 +1,540 @@
+html {
+	overflow-y:scroll;
+}
+
+body {
+    margin: 0;
+    background-color: #EEE;
+    font-family: "Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, "Jamrul", sans-serif;
+}
+
+h1 {
+    padding: 20px 0 0 20px;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    border: none;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+header {
+    overflow: hidden;
+    background-color: #222;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 6px;
+}
+
+nav#main-menu {
+    background-color: #EEE;
+    width: 900px;
+}
+
+nav#main-menu ul {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 0;
+}
+
+nav#main-menu ul li {
+    display: inline-block;
+}
+
+nav#main-menu a {
+    line-height: 50px;
+    width: 220px;
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+nav#main-menu ul li:hover {
+    background-color: #CCC;
+}
+
+.basic-container {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 6px;
+    margin-bottom: 10px;
+}
+
+#left-nav {
+    float: left;
+    width: 240px;
+    margin: 0 10px 10px 0;
+}
+
+#left-nav h1 {
+    padding-top: 20px;
+    margin-top: 0px;
+}
+
+#CategoryList 
+{
+    border-radius: 3px;
+    border: 1px solid #EEE;
+    margin: 20px 0 0 0px;
+}
+
+.category-item 
+{
+    font-size: 16px;
+    font-family: "Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, "Jamrul", sans-serif;
+    border: 1px solid #EEE;
+    padding: 5px 0 5px 10px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: left;
+}
+
+input.category-item:hover {
+    background-color: #EEE;
+}
+
+#category-notes.basic-container {
+    margin: 0 0 0 250px;
+    padding-bottom: 10px;
+}
+
+#wrapper {
+    width: 900px;
+    margin: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#login-wrapper {
+    width: 400px;
+    margin: auto;
+}
+
+p#register-para {
+    font-size: 12px
+}
+
+#register-wrapper {
+    width: 400px;
+    margin: auto;
+}
+
+.basic-button {
+    background-color: #4cb7ff;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    color: #ffffff;
+    font-family: "Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, "Jamrul", sans-serif;
+    font-size: 16px;
+}
+
+.basic-button:hover {
+    background-color: #4cb7bb;
+}
+
+.basic-button:active {
+    position: relative;
+    top: 1px;
+}
+
+#add-category.basic-button {
+    width: 200px;
+    margin: 20px;
+    line-height: 40px;
+}
+
+#remember {
+    display: inline-block;
+    font-size: 12px;
+}
+
+#category-title {
+    display: inline-block;
+    padding: 0 20px;
+    width: 400px;
+}
+
+#category-title p {
+    font-size: 14px;
+}
+
+#category-navigation {
+    display: inline-block;
+    float: right;
+    padding: 10px;
+}
+
+.navigate-category-button {
+    width: 100%;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+h1#category-name {
+    margin: 0;
+    padding: 20px 0 10px 0;
+}
+
+p#category-subname {
+    margin: 0;
+    padding: 0;
+	display: block;
+}
+
+.category-header {
+    min-height: 120px;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.completed 
+{
+    background-color: #AAA;
+}
+
+.note-description {
+    padding: 20px;
+	display: none;
+}
+
+.completed-note-description {
+    padding: 20px;
+}
+
+select#category-sort {
+    width: 100%;
+    background-color: #EEE;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 20px;
+    font-size: 12px;
+}
+
+label.description {
+    margin-bottom: 10px;
+    display: block;
+}
+
+input.login {
+    width: 350px;
+    font-size: 16px;
+    border: 1px solid #999;
+    box-shadow: 0 0 3px;
+    border-radius: 3px;
+    height: 35px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+label.login {
+    padding-bottom: 10px;
+    display: block;
+}
+
+#login-container {
+    padding: 20px;
+}
+
+#register-container {
+    padding: 20px;
+}
+
+#RegisterButton {
+    line-height: 40px;
+    width: 100%;
+}
+
+button#done {
+    display: inline-block;
+    float: right;
+}
+
+#welcome-p {
+    color: white;
+    display: inline-block;
+    padding-right: 20px;
+    margin: 0;
+}
+
+#LoginButton {
+    height: 40px;
+    width: 130px;
+    margin-right: 10px;
+}
+
+img#share-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+img:hover#share-icon {
+    background-color: #777;
+    border-radius: 3px;
+}
+
+#delete-icon {
+    float: right;
+}
+
+img#delete-icon {
+    width: 20px;
+    height: 20px;
+}
+
+img:hover#delete-icon {
+    background-color: #777;
+    border-radius: 3px;
+}
+
+.note-title {
+    padding: 10px 20px;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+}
+
+.note-title:hover {
+    background-color: #EEE;
+}
+
+.note-title p {
+    display: inline-block;
+    margin: 0;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#completed-notes.basic-container {
+    padding-bottom: 10px;
+}
+
+.second-column {
+    text-align: right;
+}
+
+.note {
+    text-decoration: none;
+    color: black;
+}
+
+p.note-name {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #EEE;
+    font-size: 12px;
+    border-top: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-note {
+    background-color: #AA2222;
+}
+
+.delete-note:hover {
+    background-color: #AA6666;
+}
+
+.finish-note {
+    background-image: url('../images/tick-icon.png');
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border: none;
+}
+
+.finish-note:hover {
+    background-image: url('../images/tick-hover-icon.png');
+}
+
+.second-line {
+    text-align: right;
+}
+
+.edit-note-input {
+    font-family: "Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, "Jamrul", sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+    height: 35px;
+    min-height: 35px;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+}
+
+.edit-note-input:hover {
+    border: 1px solid #4CB7FF;
+    box-shadow: 0 0 3px #4CB7FF;
+}
+
+#top-five.basic-container {
+    margin: 0 0 0 250px;
+    padding-bottom: 10px;
+}
+
+.first-column {
+    width: 20%;
+}
+
+table.note-properties td {
+    padding-bottom: 10px;
+}
+
+.note-created {
+    font-size: 12px;
+}
+
+nav#header-menu {
+    color: white;
+}
+
+nav#header-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#header-menu ul li {
+    display: inline-block;
+}
+
+nav#header-menu ul li a {
+    width: 50px;
+    display: block;
+    text-align: center;
+    height: 50px;
+    text-decoration: none;
+}
+
+nav#header-menu ul li:hover {
+    background-color: #555;
+}
+
+#logout {
+    background-image: url('../images/logout.png');
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    border: none;
+}
+
+#welcome-label {
+    color: white;
+    display: inline-block;
+    margin: 0;
+}
+
+#mysearch {
+    font-family: "Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, "Jamrul", sans-serif;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 0;
+    width: 200px;
+    height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid black;
+}
+
+.wide-container {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#show-more {
+    padding: 20px;
+}
+
+#wide-header h1 {
+    font-size: 30px;
+}
+
+canvas {
+    width: 860px;
+    height: 400px;
+    background-color: #559;
+    margin: 20px;
+}
+
+input.dialog {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+    width: 100%;
+}
+
+input.dialog:hover {
+    border: 1px solid #4CB7FF;
+    box-shadow: 0 0 3px #4CB7FF;
+}
+
+textarea.dialog {
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 60px;
+    width: 100%;
+}
+
+textarea.dialog:hover {
+    border: 1px solid #4CB7FF;
+    box-shadow: 0 0 3px #4CB7FF;
+}
+
+div.ui-datepicker {
+    font-size: 12px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+p.language {
+    text-align: center;
+}
+
+#gridview-container 
+{
+   padding: 20px; 
+}
+
+.save-note-changes {
+    background-color: #226622;
+}
+
+.save-note-changes:hover {
+    background-color: #66AA66;
+}
+
+.delete-note {
+    background-color: #662222;
+}
+
+.delete-note:hover {
+    background-color: #AA6666;
+}

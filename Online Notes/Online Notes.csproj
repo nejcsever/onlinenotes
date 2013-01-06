@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78D68FC8-3175-46CB-B686-0B4B34AF92C5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Online_Notes</RootNamespace>
+    <AssemblyName>Online Notes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminSite.aspx" />
+    <Content Include="Completed.aspx" />
+    <Content Include="data\categories.xml" />
+    <Content Include="data\languages.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="images\delete-icon.png" />
+    <Content Include="images\english.png" />
+    <Content Include="images\logo-index.png" />
+    <Content Include="images\logo-login.png" />
+    <Content Include="images\logo-register.png" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\settings.png" />
+    <Content Include="images\share-icon.png" />
+    <Content Include="images\slovene.png" />
+    <Content Include="images\tick-hover-icon.png" />
+    <Content Include="images\tick-icon.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="scripts\completedScript.js" />
+    <Content Include="scripts\dialog-script.js" />
+    <Content Include="scripts\jquery-ui.js" />
+    <Content Include="scripts\jquery.js" />
+    <Content Include="scripts\languageChange.js" />
+    <Content Include="scripts\loginValidation.js" />
+    <Content Include="scripts\mainIndexScript.js" />
+    <Content Include="scripts\registerValidation.js" />
+    <Content Include="scripts\script.js" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_0_222222_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_100_222222_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_100_4cb7bb_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_flat_75_4cb7ff_40x100.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_glass_65_4cb7ff_1x400.png" />
+    <Content Include="styles\custom-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\custom-theme\images\ui-icons_000000_256x240.png" />
+    <Content Include="styles\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\custom-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="styles\custom-theme\jquery-ui-1.9.1.custom.css" />
+    <Content Include="styles\custom-theme\jquery-ui-1.9.1.custom.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_0_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_100_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_100_4cb7bb_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_flat_75_4cb7ff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_glass_65_4cb7ff_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-icons_000000_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\jquery-ui-1.9.1.custom.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\css\custom-theme\jquery-ui-1.9.1.custom.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\AUTHORS.txt" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\collapsible.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\custom-icons.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\fillspace.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\hoverintent.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\no-auto-height.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\accordion\sortable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\categories.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\combobox.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\custom-data.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\folding.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\images\jqueryui_32x32.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\images\jquery_32x32.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\images\sizzlejs_32x32.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\images\transparent_1x1.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\images\ui-anim_basic_16x16.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\london.xml" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\maxheight.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\multiple-remote.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\multiple.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\remote-jsonp.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\remote-with-cache.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\remote.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\xml.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\checkbox.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\icons.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\radio.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\splitbutton.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\button\toolbar.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\alt-field.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\animation.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\buttonbar.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\date-formats.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\date-range.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\dropdown-month-year.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\icon-trigger.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\images\calendar.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\inline.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\localization.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\min-max.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\multiple-calendars.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\other-months.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\show-week.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\demos.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\animated.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\modal-confirmation.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\modal-form.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\modal-message.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\dialog\modal.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\constrain-movement.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\cursor-style.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\delay-start.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\events.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\handle.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\revert.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\scroll.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\snap-to.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\sortable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\draggable\visual-feedback.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\accepted-elements.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras2.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras2_min.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras3.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras3_min.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras4.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras4_min.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\images\high_tatras_min.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\photo-manager.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\propagation.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\revert.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\shopping-cart.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\droppable\visual-feedback.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\effect\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\effect\easing.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\effect\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\calendar.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-config-on-tile.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-config-on.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-spindown-closed.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-spindown-open.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\icon-docs-info.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\images\pbar-ani.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\menu\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\menu\icons.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\menu\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\cycler.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\images\earth.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\images\flight.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\images\rocket.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\position\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\progressbar\animated.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\progressbar\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\progressbar\images\pbar-ani.gif" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\progressbar\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\progressbar\resize.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\animate.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\aspect-ratio.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\constrain-area.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\delay-start.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\helper.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\max-min.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\snap-to-grid.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\synchronous-resize.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\textarea.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\resizable\visual-feedback.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\selectable\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\selectable\display-grid.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\selectable\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\selectable\serialize.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\colorpicker.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\hotelrooms.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\multiple-vertical.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\range-vertical.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\range.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\rangemax.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\rangemin.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\side-scroll.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\slider-vertical.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\slider\steps.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\connect-lists-through-tabs.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\connect-lists.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\delay-start.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\display-grid.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\empty-lists.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\items.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\placeholder.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\sortable\portlets.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\currency.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\decimal.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\latlong.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\overflow.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\spinner\time.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\ajax.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\ajax\content1.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\ajax\content2.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\bottom.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\collapsible.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\manipulation.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\mouseover.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\sortable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\vertical.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\ajax\content1.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\ajax\content2.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\custom-animation.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\custom-content.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\custom-style.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\forms.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\images\st-stephens.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\images\tower-bridge.jpg" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\tracking.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tooltip\video-player.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\widget\default.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\widget\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\accordion.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\autocomplete.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\blind-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\bounce-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\button.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\clip-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\datepicker.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\dialog.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\draggable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\drop-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\droppable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\explode-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\fade-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\fold-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\highlight-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\jQuery.widget.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\menu.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\mouse.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\position.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\progressbar.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\puff-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\pulsate-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\resizable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\scale-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\selectable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\shake-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\size-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\slide-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\slider.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\sortable.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\spinner.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\tabs.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\tooltip.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\docs\transfer-effect.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\globalize.culture.de-DE.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\globalize.culture.ja-JP.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\globalize.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\jquery.bgiframe-2.1.2.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\jquery.cookie.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\jquery.metadata.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\jquery.mousewheel.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\jshint.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\qunit.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\external\qunit.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\grunt.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\jquery-1.8.2.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery-ui.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.accordion.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.all.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.base.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.button.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.core.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.dialog.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.menu.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.resizable.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.selectable.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.slider.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.spinner.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.tabs.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.theme.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_100_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_100_4cb7bb_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_75_4cb7ff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_glass_65_4cb7ff_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-icons_000000_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery-ui.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.accordion.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.all.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.autocomplete.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.base.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.button.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.core.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.datepicker.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.dialog.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.menu.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.progressbar.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.resizable.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.selectable.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.slider.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.spinner.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.tabs.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.theme.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\jquery.ui.tooltip.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_100_222222_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_100_4cb7bb_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_75_4cb7ff_40x100.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_glass_65_4cb7ff_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_000000_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery-ui.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.accordion.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.button.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.core.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.dialog.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.menu.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.resizable.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.selectable.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.slider.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.spinner.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.tabs.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.theme.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\themes\custom-theme\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.accordion.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.autocomplete.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.button.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.datepicker.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.dialog.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.draggable.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.droppable.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-blind.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-clip.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-drop.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-explode.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-fade.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-fold.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-scale.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-shake.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-slide.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.effect.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.menu.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.mouse.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.progressbar.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.resizable.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.selectable.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.slider.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.sortable.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.spinner.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.tabs.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.tooltip.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\index.html" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\js\jquery-1.8.2.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\js\jquery-ui-1.9.1.custom.js" />
+    <Content Include="styles\jquery-ui-1.9.1.custom\js\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="styles\style.css" />
+    <Content Include="Top5.aspx" />
+    <Content Include="scripts\topFiveScript.js" />
+    <None Include="Web References\GeoWebService\GeoIP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GeoWebService\geoipservice.disco" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\GeoWebService\geoipservice.wsdl" />
+    <None Include="Web References\GeoWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminSite.aspx.cs">
+      <DependentUpon>AdminSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite.aspx.designer.cs">
+      <DependentUpon>AdminSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs" />
+    <Compile Include="Completed.aspx.cs">
+      <DependentUpon>Completed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Completed.aspx.designer.cs">
+      <DependentUpon>Completed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top5.aspx.cs">
+      <DependentUpon>Top5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top5.aspx.designer.cs">
+      <DependentUpon>Top5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="Web References\GeoWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\categoriesSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\languagesSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\autocomplete\search.php" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\ajax\content3-slow.php" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\demos\tabs\ajax\content4-broken.php" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\package.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\README.md" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.accordion.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.autocomplete.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.button.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.core.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.datepicker.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.dialog.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.draggable.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.droppable.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-blind.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-bounce.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-clip.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-drop.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-explode.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-fade.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-fold.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-highlight.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-pulsate.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-scale.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-shake.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-slide.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect-transfer.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.effect.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.menu.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.mouse.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.position.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.progressbar.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.resizable.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.selectable.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.slider.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.sortable.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.spinner.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.tabs.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.tooltip.jquery.json" />
+    <None Include="styles\jquery-ui-1.9.1.custom\development-bundle\ui.widget.jquery.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.webservicex.net/geoipservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GeoWebService\</RelPath>
+      <UpdateFromURL>http://www.webservicex.net/geoipservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Online_Notes_GeoWebService_GeoIPService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50230</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
